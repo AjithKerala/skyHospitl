@@ -1,0 +1,75 @@
+{% extends 'index.html'%}
+{% load static %}
+{% block title%}HOME{% endblock %}
+{% block content%}
+
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
+  <div class="carousel-inner" style="height:450px;">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="{% static '/image/docter.png'%}" class="d-block w-100" alt="..." style="height:500px;" >
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="{% static '/image/docpatie.jpg'%}" class="d-block w-100" alt="..." style="height:500px;">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static '/image/doc5.jpeg'%}" class="d-block w-100" alt="..." style="height:500px">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <h2>Our Vision</h2>
+      <p>Proclaim the glory of God through quality based compassionate healthcare <br> services, bearing witness to CHRIST.</p>
+    </div>
+    <div class="col-md-6" >
+      <img src=" {% static '/image/homebasenew.jpg'%}" class="d-block w-100">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row mt-5">
+    <div class="w-100"></div>
+    <div class="col-md-6">
+      <h2>Our Mission</h2>
+      <p>Nirmala Medical Centre is committed to provide high quality and affordable<br>
+        health care through well defined quality systems and efficient professionals <br>
+        and will actively pursue ever improving quality through periodic training.</p>
+    </div>
+      <div class="col">
+      <img src="{% static '/image/homebasenew.jpg'%}" class="d-block w-100">
+    </div>
+     </div>
+  </div>
+
+  <div >
+    <div class="container">
+  <div class="row mt-5">
+    <div class="w-100"></div>
+    <div class="col-md-6">
+      <h1>Our Misssion</h1>
+      <p>Proclamation of the good news that life – a gift from GOD is worth living,
+        <br> through holistic care to the physically, mentally or spiritually wounded <br>
+        people. Founding all our health care services on Christian values and<br>
+        rendering the same to all people irrespective of religion, caste or community <br>
+        with a preferential option for the downtrodden and underprivileged.<br>
+        Contribute to the better quality of healthcare system in the society by <br>
+        training nurses with knowledge, skills and values.</p>
+    </div>
+    <div class="col">
+      <img src="{% static '/image/homebasenew.jpg'%}" class="d-block w-100">
+    </div>
+  </div>
+</div>
+   </div>
+</div>
+{% endblock %}

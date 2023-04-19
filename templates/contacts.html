@@ -1,0 +1,42 @@
+{% extends 'index.html'%}
+{%block title%}Contacts{%endblock%}
+{% load static%}
+{% block content%}
+<div>
+    <h1 style="padding-left:25%">Contact Medical Trust Hospital</h1>
+</div>
+    <hr>
+
+<div >
+    <img src="{% static '/image/contactpage.jpeg'%}" class="d-block w-100" alt="Responsive image" style="height:500px">
+</div>
+
+
+<div class="text-center">
+
+    <div class="container" >
+  <div class="row mt-5">
+    <div class="col order-0" >
+        <img src=" {% static '/image/map.png'%}" class="card-img-top" style="width:12%" >
+     <h3>Location</h3>
+        <p >Medical Trust Hospital<br>Palarivattom</p>
+
+
+    </div>
+    <div class="col">
+        <img src=" {% static '/image/phone.jpeg'%}" class="card-img-top" style="width:12%" >
+
+      <h3>Phone</h3>
+        <p>123456878910<br>04791232</p>
+    </div>
+    <div class="col " >
+                <img src=" {% static '/image/gmail.png'%}" class="card-img-top" style="width:9%" >
+
+     <h3>Email</h3>
+        <p>medicaltrustpalarivattom@gmail.com<br>medicalhospital@gmail.com</p>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock%}

@@ -1,0 +1,28 @@
+
+{% extends 'index.html'%}
+{% load static%}
+{% block title%}Docters{%endblock%}
+{% block content %}
+<div class="container">
+
+
+<div class="row mt-3">
+{% for con in value %}
+  <div class="col-md-4 my-4">
+   <div class="card" style="width: 18rem;" >
+
+       <a href="/docterdetails/{{con.id}}/"> <img class="card-img-top" src="{{con.images.url}}" alt="Card image cap" style="height:18rem;"></a>
+       <div class="card-body">
+         <h5 class="card-title">Name:-{{con.docname}}</h5>
+            <p class="card-text">Specialise:{{con.specilisation}}</p>
+              <p class="card-text">Department:{{con.name}}</p>
+
+       </div>
+     </div>
+   </div>
+
+
+{% endfor %}
+</div>
+</div>
+{% endblock %}
