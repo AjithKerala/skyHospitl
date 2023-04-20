@@ -6,7 +6,7 @@ from .models import departmentss, docterdetails
 
 # Create your views here.
 def home(request):
-    return render(request,"Home.3html")
+    return render(request,"Home.html")
 def about(request):
     return render(request,'aboutus.html')
 def team(request):
@@ -24,13 +24,11 @@ def details(request,myid):
     return render(request,'docterdetails.html',val)
 def fromdjango(request):
     if request.method=='POST':
-        form=departmentss(request.POST)
-        print(form)
-
+        form=Departmentform(request.POST)
         if form.is_valid():
             form.save()
             return redirect('department')
 
     else:
-      form=Departmentform()
+        form=Departmentform()
     return render(request,'formdjango.html',{"form":form})

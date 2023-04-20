@@ -3,7 +3,7 @@ from django import forms
 from new1.models import departmentss
 
 
-class Departmentform(forms.Modelform):
+class Departmentform(forms.ModelForm):
     class Meta:
-        models=departmentss
+        model = departmentss
         fields=['name','des']

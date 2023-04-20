@@ -9,6 +9,6 @@ urlpatterns = [
     path('Booking', views.Book, name='Booking'),
     path('Contact',views.contact,name="Contact"),
     path('department',views.department,name="department"),
-    path('docterdetails/<int:myid>/',views.details,name="docterdetails")
-    path('djangoform',views.)
+    path('docterdetails/<int:myid>/',views.details,name="docterdetails"),
+    path('djangoform',views.fromdjango,name='djangoform')
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
