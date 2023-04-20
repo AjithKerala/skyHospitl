@@ -1,11 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
+from .form import Departmentform
 from .models import departmentss, docterdetails
 
 
 # Create your views here.
 def home(request):
-    return render(request,"Home.html")
+    return render(request,"Home.3html")
 def about(request):
     return render(request,'aboutus.html')
 def team(request):
@@ -21,3 +22,15 @@ def department(request):
 def details(request,myid):
     val={"detai":docterdetails.objects.filter(id=myid).first()}
     return render(request,'docterdetails.html',val)
+def fromdjango(request):
+    if request.method=='POST':
+        form=departmentss(request.POST)
+        print(form)
+
+        if form.is_valid():
+            form.save()
+            return redirect('department')
+
+    else:
+      form=Departmentform()
+    return render(request,'formdjango.html',{"form":form})

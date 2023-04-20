@@ -10,4 +10,5 @@ urlpatterns = [
     path('Contact',views.contact,name="Contact"),
     path('department',views.department,name="department"),
     path('docterdetails/<int:myid>/',views.details,name="docterdetails")
+    path('djangoform',views.)
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
