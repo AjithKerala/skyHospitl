@@ -11,3 +11,7 @@ class docterdetails(models.Model):
     docname=models.CharField(max_length=200)
     specilisation=models.CharField(max_length=200)
     name=models.ForeignKey(departmentss,on_delete=models.CASCADE)
+class doct(models.Model):
+    imagess=models.ImageField(upload_to='doc')
+    docname=models.CharField(max_length=200)
+    department=models.CharField(max_length=200)
