@@ -1,5 +1,17 @@
 {% extends 'index.html'%}
+
+{%load crispy_forms_tags %}
 {% block title%} Booking {%endblock%}
 {%block content%}
-Booking
+
+<form method="POST" action="">
+{{formname|crispy}}
+    {% csrf_token %}
+    {% if messages %}
+{% for i in messages %}
+{{i}}
+{% endfor %}
+{% endif %}
+    <button type="submit">Submit</button>
+</form>
 {%endblock%}

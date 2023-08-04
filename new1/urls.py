@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
 from django.urls import path
 from new1 import views
 urlpatterns = [
@@ -10,5 +11,9 @@ urlpatterns = [
     path('Contact',views.contact,name="Contact"),
     path('department',views.department,name="department"),
     path('docterdetails/<int:myid>/',views.details,name="docterdetails"),
-    path('djangoform',views.fromdjango,name='djangoform')
+    path('djangoform',views.fromdjango,name='djangoform'),
+    path('dates',views.date,name='dates'),
+    path('admin/',admin.site.urls,name='admin')
+
+
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
